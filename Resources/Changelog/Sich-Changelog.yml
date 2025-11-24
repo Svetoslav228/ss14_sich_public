@@ -340,3 +340,13 @@
   id: 24
   time: '2025-11-24T08:01:23.0000000+00:00'
   url: https://github.com/Sich-me/ss14_sich_public/pull/80
+- author: Pgriha
+  changes:
+  - message: "\u041D\u0456\u0430\u043D\u0438 \u043F\u0440\u0438 \u0440\u0435\u043F\
+      \u043B\u0456\u043A\u0430\u0445 \u043F\u0438\u0449\u0430\u0442\u044C \u0433\u0443\
+      \u0447\u043D\u0456\u0448\u0435, \u043D\u0430 \u0440\u0456\u0432\u043D\u0456\
+      \ \u0437 \u0430\u0432\u0430\u043B\u0456."
+    type: Tweak
+  id: 25
+  time: '2025-11-24T08:09:16.0000000+00:00'
+  url: https://github.com/Sich-me/ss14_sich_public/pull/82
