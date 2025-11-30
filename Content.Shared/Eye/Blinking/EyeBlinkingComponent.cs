@@ -1,10 +1,10 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Shared.Sich.Eye;
+namespace Content.Shared.Eye.Blinking;
 [RegisterComponent, NetworkedComponent]
 [AutoGenerateComponentState, AutoGenerateComponentPause]
-public sealed partial class SichEyeBlinkingComponent : Component
+public sealed partial class EyeBlinkingComponent : Component
 {
     [DataField]
     [AutoNetworkedField]
