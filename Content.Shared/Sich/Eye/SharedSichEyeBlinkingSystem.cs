@@ -1,9 +1,12 @@
 using Content.Shared.Bed.Sleep;
+using Robust.Shared.Serialization;
+using Robust.Shared.Timing;
 
 namespace Content.Shared.Sich.Eye;
 public abstract partial class SharedSichEyeBlinkingSystem : EntitySystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
 
     override public void Initialize()
     {
@@ -16,12 +19,12 @@ public abstract partial class SharedSichEyeBlinkingSystem : EntitySystem
 
     private void OnBlinkingRemoved(Entity<SichEyeBlinkingComponent> ent, ref ComponentRemove args)
     {
-        EndBlink(ent.Owner, ent.Comp);
+        OpenEyes(ent.Owner, ent.Comp);
     }
 
     private void OnBlinkingShutdown(Entity<SichEyeBlinkingComponent> ent, ref ComponentShutdown args)
     {
-        EndBlink(ent.Owner, ent.Comp);
+        OpenEyes(ent.Owner, ent.Comp);
     }
 
     private void OnComponentRemoved(RemovedComponentEventArgs args)
@@ -33,9 +36,7 @@ public abstract partial class SharedSichEyeBlinkingSystem : EntitySystem
         {
             eyeComp.IsSleeping = false;
 
-            eyeComp.NextBlinkTimer = eyeComp.BlinkInterval;
-            eyeComp.BlinkDurationTimer = 0f;
-            EndBlink(entUID, eyeComp); //Make sure eyes are open when waking up
+            OpenEyes(entUID, eyeComp);
             Dirty(entUID, eyeComp);
         }
     }
@@ -48,10 +49,7 @@ public abstract partial class SharedSichEyeBlinkingSystem : EntitySystem
         if (TryComp<SichEyeBlinkingComponent>(entUID, out var eyeComp))
         {
             eyeComp.IsSleeping = true;
-
-            eyeComp.NextBlinkTimer = eyeComp.BlinkInterval;
-            eyeComp.BlinkDurationTimer = 0f;
-            TriggerBlink(entUID, eyeComp); //Make sure eyes are open when waking up
+            Blink(entUID, eyeComp, _timing.CurTime);
             Dirty(entUID, eyeComp);
         }
     }
@@ -60,42 +58,54 @@ public abstract partial class SharedSichEyeBlinkingSystem : EntitySystem
     {
         base.Update(frameTime);
 
+        var curTime = _timing.CurTime;
+
         var query = EntityQueryEnumerator<SichEyeBlinkingComponent>();
 
         while (query.MoveNext(out var uid, out var comp))
         {
-            if (comp.IsSleeping)
+            if (comp.IsSleeping) continue;
+            if (comp.NextBlinkingTime > curTime)
                 continue;
 
-            if (comp.NextBlinkTimer <= 0f)
+            if (comp.IsBlinking)
             {
-                TriggerBlink(uid, comp);
-            }
-
-            if (comp.BlinkDurationTimer > 0f)
-            {
-                if (comp.BlinkDurationTimer <= 0f)
+                if (curTime >= comp.LastBlinkTime + comp.BlinkDuration)
                 {
-                    EndBlink(uid, comp);
+                    OpenEyes(uid, comp);
+                }
+            }
+            else
+            {
+                if (comp.NextBlinkingTime <= curTime)
+                {
+                    Blink(uid, comp, curTime);
                 }
             }
         }
     }
 
-    protected virtual void EndBlink(EntityUid uid, SichEyeBlinkingComponent comp)
+    private void Blink(EntityUid uid, SichEyeBlinkingComponent comp, TimeSpan curTime)
     {
+        comp.IsBlinking = true;
+        comp.LastBlinkTime = curTime;
+
+        comp.NextBlinkingTime = curTime + comp.BlinkInterval;
+
+        Dirty(uid, comp);
+
         if (!TryComp<AppearanceComponent>(uid, out var appearance))
             return;
-
-        UpdateAppearance(uid, appearance, false);
+        UpdateAppearance(uid, appearance, true);
     }
 
-    protected virtual void TriggerBlink(EntityUid uid, SichEyeBlinkingComponent comp)
+    private void OpenEyes(EntityUid uid, SichEyeBlinkingComponent comp)
     {
+        comp.IsBlinking = false;
+        Dirty(uid, comp);
         if (!TryComp<AppearanceComponent>(uid, out var appearance))
             return;
-
-        UpdateAppearance(uid, appearance, true);
+        UpdateAppearance(uid, appearance, false);
     }
 
     protected virtual void UpdateAppearance(EntityUid uid, AppearanceComponent appearance, bool isBlinking)
@@ -104,7 +114,8 @@ public abstract partial class SharedSichEyeBlinkingSystem : EntitySystem
     }
 }
 
-public enum SichEyeBlinkingVisuals
+[Serializable, NetSerializable]
+public enum SichEyeBlinkingVisuals : byte
 {
     Blinking
 }

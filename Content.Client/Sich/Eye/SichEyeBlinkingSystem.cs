@@ -34,6 +34,5 @@ public sealed partial class SichEyeBlinkingSystem : SharedSichEyeBlinkingSystem
         {
             spriteComponent[_sprite.LayerMapReserve((ent.Owner, spriteComponent), HumanoidVisualLayers.Eyes)].Visible = !state;
         }
-
     }
 }
