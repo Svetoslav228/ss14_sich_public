@@ -1,4 +1,5 @@
 using Content.Shared.Bed.Sleep;
+using Content.Shared.Mobs.Systems;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 
@@ -7,6 +8,7 @@ public abstract partial class SharedSichEyeBlinkingSystem : EntitySystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
 
     override public void Initialize()
     {
@@ -64,23 +66,19 @@ public abstract partial class SharedSichEyeBlinkingSystem : EntitySystem
 
         while (query.MoveNext(out var uid, out var comp))
         {
-            if (comp.IsSleeping) continue;
-            if (comp.NextBlinkingTime > curTime)
+            if (_mobState.IsDead(uid))
                 continue;
-
-            if (comp.IsBlinking)
+            if (comp.IsSleeping)
+                continue;
+            if (!comp.IsBlinking)
             {
-                if (curTime >= comp.LastBlinkTime + comp.BlinkDuration)
-                {
-                    OpenEyes(uid, comp);
-                }
+                if (comp.NextBlinkingTime <= curTime)
+                    Blink(uid, comp, curTime);
             }
             else
             {
-                if (comp.NextBlinkingTime <= curTime)
-                {
-                    Blink(uid, comp, curTime);
-                }
+                if (comp.NextOpenEyesTime <= curTime)
+                    OpenEyes(uid, comp);
             }
         }
     }
@@ -88,12 +86,9 @@ public abstract partial class SharedSichEyeBlinkingSystem : EntitySystem
     private void Blink(EntityUid uid, SichEyeBlinkingComponent comp, TimeSpan curTime)
     {
         comp.IsBlinking = true;
-        comp.LastBlinkTime = curTime;
-
-        comp.NextBlinkingTime = curTime + comp.BlinkInterval;
-
+        comp.NextOpenEyesTime = curTime + comp.BlinkDuration;
+        comp.NextBlinkingTime = curTime + comp.BlinkInterval + comp.BlinkDuration;
         Dirty(uid, comp);
-
         if (!TryComp<AppearanceComponent>(uid, out var appearance))
             return;
         UpdateAppearance(uid, appearance, true);

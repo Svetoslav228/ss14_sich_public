@@ -22,7 +22,7 @@ public sealed partial class SichEyeBlinkingSystem : SharedSichEyeBlinkingSystem
 
         if (_appearance.TryGetData(ent.Owner, SichEyeBlinkingVisuals.Blinking, out var stateObj) && stateObj is bool state)
         {
-            spriteComponent[_sprite.LayerMapReserve((ent.Owner, spriteComponent), HumanoidVisualLayers.Eyes)].Visible = !state;
+            ChangeEyeState(ent, spriteComponent, state);
         }
     }
 
@@ -30,9 +30,21 @@ public sealed partial class SichEyeBlinkingSystem : SharedSichEyeBlinkingSystem
     {
         if (!TryComp<SpriteComponent>(ent.Owner, out var spriteComponent))
             return;
+
         if (args.AppearanceData.TryGetValue(SichEyeBlinkingVisuals.Blinking, out var stateObj) && stateObj is bool state)
         {
-            spriteComponent[_sprite.LayerMapReserve((ent.Owner, spriteComponent), HumanoidVisualLayers.Eyes)].Visible = !state;
+            ChangeEyeState(ent, spriteComponent, state);
         }
+    }
+
+    private void ChangeEyeState(Entity<SichEyeBlinkingComponent> ent, SpriteComponent sprite, bool isBlinking)
+    {
+        if (!TryComp<HumanoidAppearanceComponent>(ent.Owner, out var humanoid)) return;
+        var blinkFade = ent.Comp.BlinkSkinColorMultiplier;
+        var blinkColor = new Color(
+            humanoid.SkinColor.R * blinkFade,
+            humanoid.SkinColor.G * blinkFade,
+            humanoid.SkinColor.B * blinkFade);
+        sprite[_sprite.LayerMapReserve((ent.Owner, sprite), HumanoidVisualLayers.Eyes)].Color = isBlinking ? blinkColor : humanoid.EyeColor;
     }
 }

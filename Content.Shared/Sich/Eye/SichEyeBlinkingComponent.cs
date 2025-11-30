@@ -8,14 +8,17 @@ public sealed partial class SichEyeBlinkingComponent : Component
 {
     [DataField]
     [AutoNetworkedField]
-    public TimeSpan BlinkDuration = TimeSpan.FromSeconds(2);
+    public TimeSpan BlinkDuration = TimeSpan.FromSeconds(0.5f);
     [DataField]
     [AutoNetworkedField]
-    public TimeSpan BlinkInterval = TimeSpan.FromSeconds(15);
+    public TimeSpan BlinkInterval = TimeSpan.FromSeconds(5);
+    [DataField]
+    [AutoNetworkedField]
+    public float BlinkSkinColorMultiplier = 0.9f;
 
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
     [AutoNetworkedField, AutoPausedField]
-    public TimeSpan LastBlinkTime;
+    public TimeSpan NextOpenEyesTime;
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
     [AutoNetworkedField, AutoPausedField]
     public TimeSpan NextBlinkingTime;
