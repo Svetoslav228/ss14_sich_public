@@ -1,23 +1,18 @@
-using Robust.Shared.Serialization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Robust.Shared.GameStates;
 
 namespace Content.Shared.Sich.Eye;
-[RegisterComponent, AutoGenerateComponentState]
+[NetworkedComponent, RegisterComponent, AutoGenerateComponentState]
 public sealed partial class SichEyeBlinkingComponent : Component
 {
     [DataField]
-    public float BlinkDuration = 0.2f;
+    public float BlinkDuration = 2f;
     [DataField]
-    public float BlinkInterval = 1f;
+    public float BlinkInterval = 15f;
     [AutoNetworkedField]
-    public float NextBlinkTimer = 0f;
+    public float NextBlinkTimer { get; set; }
     [AutoNetworkedField]
-    public float BlinkDurationTimer = 0f;
-
-    public bool IsSleeping = false;
+    public float BlinkDurationTimer { get; set; }
+    [AutoNetworkedField]
+    public bool IsSleeping { get; set; }
 
 }

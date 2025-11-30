@@ -1,13 +1,6 @@
 using Content.Shared.Humanoid;
 using Content.Shared.Sich.Eye;
-using Microsoft.CodeAnalysis.Elfie.Serialization;
 using Robust.Client.GameObjects;
-using Robust.Shared.GameObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Content.Client.Sich.Eye;
 public sealed partial class SichEyeBlinkingSystem : SharedSichEyeBlinkingSystem
@@ -19,6 +12,18 @@ public sealed partial class SichEyeBlinkingSystem : SharedSichEyeBlinkingSystem
     {
         base.Initialize();
         SubscribeLocalEvent<SichEyeBlinkingComponent, AppearanceChangeEvent>(OnAppearance);
+        SubscribeLocalEvent<SichEyeBlinkingComponent, ComponentStartup>(OnStartup);
+    }
+
+    private void OnStartup(Entity<SichEyeBlinkingComponent> ent, ref ComponentStartup args)
+    {
+        if (!TryComp<SpriteComponent>(ent.Owner, out var spriteComponent))
+            return;
+
+        if (_appearance.TryGetData(ent.Owner, SichEyeBlinkingVisuals.Blinking, out var stateObj) && stateObj is bool state)
+        {
+            spriteComponent[_sprite.LayerMapReserve((ent.Owner, spriteComponent), HumanoidVisualLayers.Eyes)].Visible = !state;
+        }
     }
 
     private void OnAppearance(Entity<SichEyeBlinkingComponent> ent, ref AppearanceChangeEvent args)
