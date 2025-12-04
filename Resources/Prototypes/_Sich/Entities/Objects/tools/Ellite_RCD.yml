@@ -1,0 +1,22 @@
+- type: entity
+  id: RCDEllite
+  parent: [RCD, BaseGrandTheftContraband]
+  name: еллітний ПШБ
+  description: Елітний ПШБ який видають професіанальним інженерам, оснащенний гарним ліхтарем на міні РТГ, тож може працювати майближчі 100 років без проблем. На цьому усі різниці у функціоналі закінчуються....
+  components:
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    color: "#b9ffbc"
+    enabled: false
+    radius: 6.5
+  - type: Sprite
+    sprite: Objects/Tools/ellite_rcd.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: Objects/Tools/ellite_rcd.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  
