@@ -10,12 +10,12 @@
     enabled: false
     radius: 6.5
   - type: Sprite
-    sprite: Objects/Tools/ellite_rcd.rsi
+    sprite: _Sich/Objects/tools/ellite_rcd.rsi
     state: icon
   - type: Item
     size: Normal
   - type: Clothing
-    sprite: Objects/Tools/ellite_rcd.rsi
+    sprite: _Sich/Objects/tools/ellite_rcd.rsi
     quickEquip: false
     slots:
     - Belt
