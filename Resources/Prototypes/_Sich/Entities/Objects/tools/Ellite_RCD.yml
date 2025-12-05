@@ -8,7 +8,7 @@
   - type: PointLight
     color: "#b9ffbc"
     enabled: false
-    radius: 6.5
+    radius: 4.5
   - type: Sprite
     sprite: _Sich/Objects/tools/ellite_rcd.rsi
     state: icon
