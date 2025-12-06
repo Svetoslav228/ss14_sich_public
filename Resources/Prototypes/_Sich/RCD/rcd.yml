@@ -32,8 +32,8 @@
   sprite: /Textures/_Sich/Interface/Radial/RCD/highsec.png
   mode: ConstructObject
   prototype: HighSecDoor
-  cost: 6
-  delay: 6
+  cost: 15
+  delay: 15
   collisionMask: FullTileMask
   rotation: Camera
   fx: EffectRCDConstruct4
@@ -44,8 +44,8 @@
   sprite: /Textures/_Sich/Interface/Radial/RCD/blastdoor.png
   mode: ConstructObject
   prototype: BlastDoor
-  cost: 4
-  delay: 4
+  cost: 6
+  delay: 10
   collisionMask: Impassable
   rotation: Camera
   fx: EffectRCDConstruct4
