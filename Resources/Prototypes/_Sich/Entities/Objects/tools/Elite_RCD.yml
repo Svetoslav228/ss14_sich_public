@@ -2,7 +2,7 @@
   id: RCDElite
   parent: [RCD, BaseGrandTheftContraband]
   name: еллітний ПШБ
-  description: Елітний ПШБ який видають професіанальним інженерам, оснащенний гарним ліхтарем на міні РТГ, який може працювати найближчі 100 років без проблем. На цьому усі різниці у функціоналі закінчуються....
+  description: Елітний ПШБ який видають професіанальним інженерам, оснащенний гарним ліхтарем на міні РТГ, який може працювати найближчі 100 років без проблем. Також має розширенний запас зарядів та нові схеми!
   components:
   - type: UnpoweredFlashlight
   - type: PointLight
@@ -13,4 +13,32 @@
     sprite: _Sich/Objects/tools/ellite_rcd.rsi
   - type: Clothing
     sprite: _Sich/Objects/tools/ellite_rcd.rsi
+  - type: LimitedCharges
+    maxCharges: 40
+  - type: RCD
+    availablePrototypes:
+    - AirlockCommand
+    - AirlockGlassCommand
+    - HighSecDoor
+    - BlastDoor
+    - ShuttersNormal
+    - WallSolid
+    - FloorSteel
+    - Plating
+    - Catwalk
+    - Grille
+    - Window
+    - WindowDirectional
+    - WindowReinforcedDirectional
+    - ReinforcedWindow
+    - Airlock
+    - AirlockGlass
+    - Firelock
+    - TubeLight
+    - BulbLight
+    - LVCable
+    - MVCable
+    - HVCable
+    - CableTerminal
+    - Deconstruct
   
