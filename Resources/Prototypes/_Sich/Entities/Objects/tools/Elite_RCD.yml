@@ -15,6 +15,8 @@
     sprite: _Sich/Objects/tools/ellite_rcd.rsi
   - type: LimitedCharges
     maxCharges: 40
+  - type: StealTarget
+    stealGroup: RCDElite
   - type: RCD
     availablePrototypes:
     - AirlockCommand
