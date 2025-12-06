@@ -16,6 +16,7 @@
     RDHardsuitStealObjective: 1
     NukeDiskStealObjective: 1
     MagbootsStealObjective: 1
+    RCDEliteStealObjective: 1 # Sich
     CorgiMeatStealObjective: 1
     ClipboardStealObjective: 1
     KnuckleDustersStealObjective: 1
@@ -83,6 +84,7 @@
     MedicalTechFabCircuitboardStealObjective: 1
     FireAxeStealObjective: 1                            #eng
     AmePartFlatpackStealObjective: 1
+    RCDEliteStealObjective: 1 # Sich
     ExpeditionsCircuitboardStealObjective: 1            #sup
     CargoShuttleCircuitboardStealObjective: 1
     ClothingEyesHudBeerStealObjective: 0.5              #srv, beer goggles less common cause its so easy

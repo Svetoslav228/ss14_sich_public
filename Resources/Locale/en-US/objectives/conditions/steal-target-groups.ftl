@@ -45,6 +45,7 @@ steal-target-groups-clothing-neck-goldmedal = золота медаль екіп
 steal-target-groups-clothing-neck-clownmedal = медаль клоуна
 steal-target-groups-wanted-list-cartridge = картридж зі списком розшукуваних
 steal-target-groups-belt-ce = пояс з інструментами головного інженера
+steal-target-groups-RCDElite = елітний ПШБ
 steal-target-groups-captain-sword = шабля капітана
 
 # Злодійські структури
