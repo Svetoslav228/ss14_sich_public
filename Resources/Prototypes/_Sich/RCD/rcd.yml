@@ -44,8 +44,8 @@
   sprite: /Textures/_Sich/Interface/Radial/RCD/blastdoor.png
   mode: ConstructObject
   prototype: BlastDoor
-  cost: 6
-  delay: 10
+  cost: 25
+  delay: 30
   collisionMask: Impassable
   rotation: Camera
   fx: EffectRCDConstruct4
