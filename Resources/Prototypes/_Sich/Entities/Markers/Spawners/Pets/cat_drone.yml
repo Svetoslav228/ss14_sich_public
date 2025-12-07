@@ -1,0 +1,13 @@
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobCatDrone
+  name: Спавнер робокішки
+  suffix: Питомець станції
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobCatDrone
