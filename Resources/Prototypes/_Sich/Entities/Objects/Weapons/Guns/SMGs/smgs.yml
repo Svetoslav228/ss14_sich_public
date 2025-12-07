@@ -15,8 +15,8 @@
     sprite: _Sich/Objects/Weapons/Guns/SMGs/otaku.rsi
   - type: Gun
     fireRate: 7
-    minAngle: 6
-    maxAngle: 35
+    minAngle: 0
+    maxAngle: 28
     angleIncrease: 4
     angleDecay: 35
     soundGunshot:
