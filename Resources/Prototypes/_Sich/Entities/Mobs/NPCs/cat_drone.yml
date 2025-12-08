@@ -108,7 +108,7 @@
     makeSentient: true
     name: ghost-role-information-drone-cat-name
     description: ghost-role-information-drone-cat-description
-    rules: ghost-role-information-drone-cat-rules
+    rules: ghost-role-information-nonantagonist-rules
     raffle:
       settings: short
   - type: GhostTakeoverAvailable
