@@ -1,9 +1,9 @@
 
 - type: entity
-  name: Робо кішка
-  id: MobCatDrone
+  name: Робо-кішка
+  id: SichMobCatDrone
   parent: MobCat
-  description: Товста металева дупа яку любить уся станція, на дотик почувається навіть м'якою та пухнастою.
+  description: Товста металева дупа, яку любить уся станція, на дотик відчувається навіть м'якою та пухнастою.
   components:
   - type: Sprite
     sprite: _Sich/Mobs/NPCs/Pets/cat_drone.rsi
