@@ -347,7 +347,6 @@
       weight: 0.015
     - id: SichPlushieMoffRanch
       weight: 0.015
-      orGroup: dresserthirdloot
     - id: ClothingHeadHatXmasCrown
       weight: 0.02
     - id: ClothingHeadHatBeretBrigmedic
