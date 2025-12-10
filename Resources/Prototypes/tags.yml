@@ -405,9 +405,6 @@
 - type: Tag
   id: CrayonYellow # ConstructionGraph: ClownHardsuit. ItemMapper: CrayonBox
 
-- type: Tag #Sich
-  id: CrayonRainbow # ItemMapper: CrayonBox
-
 - type: Tag
   id: Creamsicle # Blacklist on BountyFruit
 

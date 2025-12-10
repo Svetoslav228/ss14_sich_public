@@ -119,7 +119,7 @@
 - type: entity
   parent: CrayonRainbow
   id: CrayonInfinite # should not be player available to prevent decal spam
-  name: нещкінченний олівець
+  name: нескінченний олівець
   components:
   - type: Crayon
     deleteEmpty: false
@@ -287,7 +287,7 @@
   parent: BoxCardboard
   id: CrayonBox
   name: коробка олівців
-  description: це коробка олівеців.
+  description: це коробка олівців.
   components:
   - type: Sprite
     sprite: _Sich/Objects/Fun/crayons.rsi #Sich
