@@ -112,6 +112,7 @@
     tags:
     - Write
     - Crayon
+    - CrayonRainbow #Sich
     - Recyclable
     - Trash
 
@@ -289,14 +290,14 @@
   description: It's a box of crayons.
   components:
   - type: Sprite
-    sprite: Objects/Fun/crayons.rsi
+    sprite: _Sich/Objects/Fun/crayons.rsi #Sich
     state: box
   - type: Storage
     grid:
-    - 0,0,7,0
+    - 0,0,8,0 #Sich
     maxItemSize: Tiny
   - type: Item
-    sprite: Objects/Fun/crayons.rsi
+    sprite: _Sich/Objects/Fun/crayons.rsi #Sich
     size: Small
     heldPrefix: box
   - type: EntityTableContainerFill
@@ -311,6 +312,7 @@
         - id: CrayonPurple
         - id: CrayonBlack
         - id: CrayonWhite
+        - id: CrayonRainbow #Sich
   - type: ItemMapper
     mapLayers:
       black_box:
@@ -345,4 +347,8 @@
         whitelist:
           tags:
           - CrayonWhite
+      rainbow_box: #Sich
+        whitelist:
+          tags:
+          - CrayonRainbow
   - type: Appearance
