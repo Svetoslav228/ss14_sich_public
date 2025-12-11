@@ -2,8 +2,8 @@
   abstract: true
   parent: BaseItem
   id: CrayonInedible
-  name: олівець
-  description: Кольоривий олівець. Виглядає смачно. Мммммм...
+  name: крейда
+  description: Кольорова крейда. Виглядає смачно. Мммммм...
   components:
   - type: Sprite
     sprite: Objects/Fun/crayons.rsi
@@ -31,7 +31,7 @@
   abstract: true
   parent: CrayonInedible
   id: Crayon
-  name: crayon
+  name: крейда
   description: A colourful crayon. Looks tasty. Mmmm...
   components:
   - type: Sprite
@@ -59,7 +59,7 @@
 - type: entity
   parent: Crayon
   id: CrayonWhite
-  name: білий олівець
+  name: біла крейда
   components:
   - type: Sprite
     state: white
@@ -78,7 +78,7 @@
 - type: entity
   parent: Crayon
   id: CrayonMime
-  name: олівець міма
+  name: крейда міма
   components:
   - type: Sprite
     state: mime
@@ -97,7 +97,7 @@
 - type: entity
   parent: Crayon
   id: CrayonRainbow
-  name: райдужний олівець
+  name: веселкова крейда
   components:
   - type: Sprite
     state: rainbow
@@ -119,7 +119,7 @@
 - type: entity
   parent: CrayonRainbow
   id: CrayonInfinite # should not be player available to prevent decal spam
-  name: нескінченний олівець
+  name: нескінченна крейда
   components:
   - type: Crayon
     deleteEmpty: false
@@ -129,8 +129,8 @@
 - type: entity
   parent: CrayonInedible
   id: CrayonBorg
-  name: електричний олівець
-  description: Напевно найсмачніший олівець в усьому світі!; Нажаль, ти не зможеш його з'їсти.
+  name: електрична крейда
+  description: Напевно найсмачніша крейда в усьому світі!; Нажаль, ти не зможеш її з'їсти.
   components:
   - type: Sprite
     state: electric
@@ -153,7 +153,7 @@
 - type: entity
   parent: Crayon
   id: CrayonBlack
-  name: чорний олівець
+  name: чорна крейда
   components:
   - type: Sprite
     state: black
@@ -172,7 +172,7 @@
 - type: entity
   parent: Crayon
   id: CrayonRed
-  name: червоний олівець
+  name: червона крейда
   components:
   - type: Sprite
     state: red
@@ -191,7 +191,7 @@
 - type: entity
   parent: Crayon
   id: CrayonOrange
-  name: помаранчевий олівець
+  name: помаранчова крейда
   components:
   - type: Sprite
     state: orange
@@ -210,7 +210,7 @@
 - type: entity
   parent: Crayon
   id: CrayonYellow
-  name: жовтий олівець
+  name: жовта крейда
   components:
   - type: Sprite
     state: yellow
@@ -229,7 +229,7 @@
 - type: entity
   parent: Crayon
   id: CrayonGreen
-  name: зелений олівець
+  name: зелена крейда
   components:
   - type: Sprite
     state: green
@@ -248,7 +248,7 @@
 - type: entity
   parent: Crayon
   id: CrayonBlue
-  name: синій олівець
+  name: синя крейда
   components:
   - type: Sprite
     state: blue
@@ -267,7 +267,7 @@
 - type: entity
   parent: Crayon
   id: CrayonPurple
-  name: фіолетовий олівець
+  name: фіолетова крейда
   components:
   - type: Sprite
     state: purple
@@ -286,8 +286,8 @@
 - type: entity
   parent: BoxCardboard
   id: CrayonBox
-  name: коробка олівців
-  description: це коробка олівців.
+  name: коробка крейди
+  description: це коробка крейди.
   components:
   - type: Sprite
     sprite: _Sich/Objects/Fun/crayons.rsi #Sich
