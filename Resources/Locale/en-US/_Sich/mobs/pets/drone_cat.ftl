@@ -1,1 +1,1 @@
-petting-success-drone-cat = ви погладили робо кішку по її пухнастій голові
+petting-success-drone-cat = ви погладили робо-кішку по її пухнастій голові
