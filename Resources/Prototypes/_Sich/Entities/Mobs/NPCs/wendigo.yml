@@ -43,7 +43,7 @@
     rootTask:
       task: SimpleHostileCompound
   - type: SpecialRespawn
-    prototype: MobWendigo
+    prototype: SichMobWendigo
   - type: MovementSpeedModifier
     baseWalkSpeed : 4
     baseSprintSpeed : 5
@@ -151,8 +151,8 @@
   - type: ItemBorgModule
     hands:
     - item: SprayPainterBorg
-    - item: CrayonBorg
+    - item: SichCrayonWendigo
     - item: ChameleonProjector
-    - item: CloakingDevice
+    - item: SuperCloakingDevice
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: artistry-module }

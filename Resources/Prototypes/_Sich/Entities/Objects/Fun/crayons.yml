@@ -1,0 +1,23 @@
+- type: entity
+  parent: CrayonInedible
+  id: SichCrayonWendigo
+  name: містична кредка
+  description: містична кредка щоби зіставляти знаки.
+  components:
+  - type: Sprite
+    state: electric
+  - type: Item
+    heldPrefix: electric
+  - type: Crayon
+    deleteEmpty: false
+    color: Red
+    selectableColor: true
+  - type: LimitedCharges
+    maxCharges: 50
+  - type: AutoRecharge
+    rechargeDuration: 2.5
+  - type: Tag
+    tags:
+    - Write
+    - Crayon
+    - Trash
