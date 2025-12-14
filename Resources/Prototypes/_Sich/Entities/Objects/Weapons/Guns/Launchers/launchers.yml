@@ -1,0 +1,13 @@
+- type: entity
+  parent: WeaponTetherGun
+  id: SichWendigoWeaponTetherGun
+  name: містичний контроль
+  description: ти можеш за допомогою цього переміщювати об'єкти
+  suffix: Wendigo
+
+- type: entity
+  parent: WeaponForceGun
+  id: SichWendigoWeaponForceGun
+  name: містичний сила
+  description: ти можеш за допомогою цього кидати об'єкти
+  suffix: Wendigo

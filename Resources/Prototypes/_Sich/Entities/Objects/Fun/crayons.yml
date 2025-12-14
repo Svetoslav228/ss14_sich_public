@@ -3,6 +3,7 @@
   id: SichCrayonWendigo
   name: містична кредка
   description: містична кредка щоби зіставляти знаки.
+  suffix: Wendigo
   components:
   - type: Sprite
     state: electric

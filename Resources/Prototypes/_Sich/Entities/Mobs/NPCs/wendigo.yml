@@ -145,6 +145,7 @@
   id: SichWendigoAbilities
   name: здібності для запугування
   description: твої здібності для того щоб налякати членів екіпажу.
+  suffix: Wendigo
   components:
   - type: Sprite
     layers:
@@ -152,10 +153,10 @@
     - state: icon-xenoborg-projector
   - type: ItemBorgModule
     hands:
-    - item: SprayPainterBorg
+    - item: SichWendigoSprayPainter
     - item: SichCrayonWendigo
     - item: ChameleonProjector
-    - item: SuperCloakingDevice
+    - item: SichWendigoCloaking
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: artistry-module }
 
@@ -164,6 +165,7 @@
   id: SichWendigoAbilitiesCombat
   name: здібності для нападу
   description: твої здібності для того щоб напасти на членів екіпажу.
+  suffix: Wendigo
   components:
   - type: Sprite
     layers:
@@ -172,8 +174,8 @@
   - type: ItemBorgModule
     hands:
     - item: SichWendigoArmBlade
-    - item: WeaponForceGun
-    - item: WeaponTetherGun
-    - item: SuperCloakingDevice
+    - item: SichWendigoWeaponForceGun
+    - item: SichWendigoWeaponTetherGun
+    - item: SichWendigoCloaking
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: artistry-module }
+    icon: { sprite: Interface/Actions/changeling.rsi, state: armblade }

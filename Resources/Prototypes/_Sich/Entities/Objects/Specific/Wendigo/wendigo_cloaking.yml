@@ -1,0 +1,16 @@
+- type: entity
+  parent: [ BaseItem, BaseXenoborgContraband ]
+  id: CloakingDevice
+- type: entity
+  parent: SuperCloakingDevice
+  id: SichWendigoCloaking
+  name: перехід у невидимість
+  description: Ти можеш стати невидимим.
+  suffix: Wendigo
+  components:
+  - type: ComponentToggler
+    parent: true
+    components:
+    - type: Stealth
+      minVisibility: -1
+      lastVisibility: 0.1

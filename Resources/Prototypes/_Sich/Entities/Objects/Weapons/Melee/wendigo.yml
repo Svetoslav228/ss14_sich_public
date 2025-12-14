@@ -3,6 +3,7 @@
   parent: BaseItem
   id: SichWendigoArmBlade
   description: Потворне лезо, з містичної матерії.
+  suffix: Wendigo
   components:
   - type: Sharp
   - type: Execution
