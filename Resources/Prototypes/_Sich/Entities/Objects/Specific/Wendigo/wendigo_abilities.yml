@@ -1,6 +1,6 @@
 #частина віндіго
 - type: entity
-  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule,]
   id: SichWendigoAbilities
   name: здібності для запугування
   description: твої здібності для того щоб налякати членів екіпажу.
@@ -20,7 +20,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: artistry-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule,]
   id: SichWendigoAbilitiesCombat
   name: здібності для нападу
   description: твої здібності для того щоб напасти на членів екіпажу.
