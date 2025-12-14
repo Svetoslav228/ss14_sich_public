@@ -98,6 +98,7 @@
     tags:
       - DoorBumpOpener
       - CanPilot
+      - CannotSuicide
   - type: MovementAlwaysTouching
   - type: PressureImmunity
   - type: ProtectedFromStepTriggers
