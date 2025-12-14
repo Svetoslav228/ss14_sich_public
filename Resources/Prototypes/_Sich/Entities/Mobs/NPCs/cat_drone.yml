@@ -29,8 +29,16 @@
     doAfterDelay: 10
     allowSelfRepair: false
   - type: Bloodstream
-    bloodReagent: Oil
-    bloodMaxVolume: 100
+    bloodReagents:
+      reagents:
+      - ReagentId: Oil
+        Quantity: 1
+    bloodlossDamage:
+      types:
+        Heat: 0.25
+    bloodlossHealDamage:
+      types:
+        Heat: -0.5
   - type: Speech
     speechSounds: Cat
     speechVerb: Robotic
@@ -69,8 +77,8 @@
       id: blinking
       interpolate: Nearest
       maxDuration: 1.0
-      minValue: 0.1
-      maxValue: 2.0
+      startValue: 0.1
+      endValue: 2.0
       isLooped: true
   - type: ToggleableLightVisuals
     spriteLayer: light
