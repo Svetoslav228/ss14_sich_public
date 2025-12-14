@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "drawn by svetoslav228",
+  "states": [
+    {
+      "name": "wendigo",
+      "directions": 4
+	},
+	{
+	  "name": "wendigo_e",
+      "directions": 4
+	},
+	{
+	  "name": "wendigo_e_r",
+      "directions": 4
+	},
+	{
+	  "name": "wendigo_l",
+      "directions": 4
+	},
+    {
+      "name": "wendigo-moving",
+      "directions": 4,
+      "delays": [
+        [
+          0.2,
+          0.2,
+		  0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.2,
+		  0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.2,
+		  0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.2,
+		  0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "wendigo_dead",
+      "delays": [
+        [
+          1
+        ]
+      ]
+    }
+  ]
+}
