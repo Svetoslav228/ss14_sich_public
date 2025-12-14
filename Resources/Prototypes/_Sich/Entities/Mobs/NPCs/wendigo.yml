@@ -126,7 +126,7 @@
   - type: BorgChassis
     hasMindState: wendigo_e
     noMindState: wendigo_e_r
-    maxModules: 2
+    maxModules: 3
     moduleWhitelist:
       tags:
         - SichWendigoAbilitiesCombat
@@ -138,44 +138,3 @@
       borg_module:
       - SichWendigoAbilitiesCombat
       - SichWendigoAbilities
-
-#частина віндіго
-- type: entity
-  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule, BaseXenoborgContraband ]
-  id: SichWendigoAbilities
-  name: здібності для запугування
-  description: твої здібності для того щоб налякати членів екіпажу.
-  suffix: Wendigo
-  components:
-  - type: Sprite
-    layers:
-    - state: xenoborg_stealth
-    - state: icon-xenoborg-projector
-  - type: ItemBorgModule
-    hands:
-    - item: SichWendigoSprayPainter
-    - item: SichCrayonWendigo
-    - item: ChameleonProjector
-    - item: SichWendigoCloaking
-  - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: artistry-module }
-
-- type: entity
-  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule, BaseXenoborgContraband ]
-  id: SichWendigoAbilitiesCombat
-  name: здібності для нападу
-  description: твої здібності для того щоб напасти на членів екіпажу.
-  suffix: Wendigo
-  components:
-  - type: Sprite
-    layers:
-    - state: xenoborg_stealth
-    - state: icon-xenoborg-projector
-  - type: ItemBorgModule
-    hands:
-    - item: SichWendigoArmBlade
-    - item: SichWendigoWeaponForceGun
-    - item: SichWendigoWeaponTetherGun
-    - item: SichWendigoCloaking
-  - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/changeling.rsi, state: armblade }

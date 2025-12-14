@@ -36,5 +36,6 @@
     - item: SichWendigoWeaponForceGun
     - item: SichWendigoWeaponTetherGun
     - item: SichWendigoCloaking
+    - item: SichWendigoJetpack
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/changeling.rsi, state: armblade }
