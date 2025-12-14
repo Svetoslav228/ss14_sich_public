@@ -108,7 +108,7 @@
     description: ghost-role-information-wendigo-description
     rules: ghost-role-information-antagonist-rules
     mindRoles:
-    - MindRoleGhostRoleTeamAntagonist
+    - MindRoleGhostRoleSoloAntagonist
     raffle:
       settings: short
   - type: GhostTakeoverAvailable
@@ -129,20 +129,22 @@
     maxModules: 2
     moduleWhitelist:
       tags:
+        - SichWendigoAbilitiesCombat
         - SichWendigoAbilities
   - type: ContainerFill
     containers:
       borg_brain:
       - MMIFilled
       borg_module:
+      - SichWendigoAbilitiesCombat
       - SichWendigoAbilities
 
 #частина віндіго
 - type: entity
   parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule, BaseXenoborgContraband ]
   id: SichWendigoAbilities
-  name: здібності віндіго
-  description: твої здібності.
+  name: здібності для запугування
+  description: твої здібності для того щоб налякати членів екіпажу.
   components:
   - type: Sprite
     layers:
@@ -153,6 +155,25 @@
     - item: SprayPainterBorg
     - item: SichCrayonWendigo
     - item: ChameleonProjector
+    - item: SuperCloakingDevice
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: artistry-module }
+
+- type: entity
+  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule, BaseXenoborgContraband ]
+  id: SichWendigoAbilitiesCombat
+  name: здібності для нападу
+  description: твої здібності для того щоб напасти на членів екіпажу.
+  components:
+  - type: Sprite
+    layers:
+    - state: xenoborg_stealth
+    - state: icon-xenoborg-projector
+  - type: ItemBorgModule
+    hands:
+    - item: SichWendigoArmBlade
+    - item: WeaponForceGun
+    - item: WeaponTetherGun
     - item: SuperCloakingDevice
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: artistry-module }

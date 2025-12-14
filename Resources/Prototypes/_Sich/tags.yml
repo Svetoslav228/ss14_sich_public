@@ -1,2 +1,5 @@
 - type: Tag
   id: SichWendigoAbilities #для здібностей вендіго
+  
+- type: Tag
+  id: SichWendigoAbilitiesCombat #для здібностей вендіго
