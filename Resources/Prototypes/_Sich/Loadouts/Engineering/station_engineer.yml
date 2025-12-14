@@ -3,6 +3,5 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: SeniorEngineering
-  storage:
-    back:
-    - SichSignCringineer
+  equipment:
+    id: SichSignCringineer

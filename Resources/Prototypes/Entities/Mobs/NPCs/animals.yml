@@ -140,10 +140,7 @@
     - Bee
     - Trash
   - type: Bloodstream
-    bloodReagents:
-      reagents:
-      - ReagentId: InsectBlood
-        Quantity: 1
+    bloodReagent: InsectBlood
     bloodMaxVolume: 0.1
   - type: MobPrice
     price: 50
@@ -391,10 +388,7 @@
       Dead:
         Base: cockroach_dead
   - type: Bloodstream
-    bloodReagents:
-      reagents:
-      - ReagentId: InsectBlood
-        Quantity: 1
+    bloodReagent: InsectBlood
     bloodMaxVolume: 20
   - type: Edible
   - type: FlavorProfile
@@ -558,10 +552,7 @@
     damageContainer: Biological
     damageModifierSet: Moth
   - type: Bloodstream
-    bloodReagents:
-      reagents:
-      - ReagentId: InsectBlood
-        Quantity: 1
+    bloodReagent: InsectBlood
   - type: Respirator
     damage:
       types:
@@ -841,10 +832,7 @@
     tags:
     - Trash
   - type: Bloodstream
-    bloodReagents:
-      reagents:
-      - ReagentId: InsectBlood
-        Quantity: 1
+    bloodReagent: InsectBlood
     bloodMaxVolume: 0.1
   - type: MobPrice
     price: 50
@@ -1002,10 +990,7 @@
     accent: crab
   - type: Bloodstream
     bloodMaxVolume: 50
-    bloodReagents:
-      reagents:
-      - ReagentId: CopperBlood
-        Quantity: 1
+    bloodReagent: CopperBlood
   - type: Tag
     tags:
     - VimPilot
@@ -1456,7 +1441,6 @@
       effects:
       - !type:WashCreamPie
   - type: Crawler
-  - type: StatusIcon
 
 
 
@@ -2011,10 +1995,7 @@
   - type: RadiationSource
     intensity: 0.3
   - type: Bloodstream
-    bloodReagents:
-      reagents:
-      - ReagentId: UnstableMutagen
-        Quantity: 1
+    bloodReagent: UnstableMutagen
   - type: SolutionContainerManager
     solutions:
       food:
@@ -2533,10 +2514,7 @@
   - type: IgnoreSpiderWeb
   - type: Bloodstream
     bloodMaxVolume: 150
-    bloodReagents:
-      reagents:
-      - ReagentId: CopperBlood
-        Quantity: 1
+    bloodReagent: CopperBlood
   - type: Speech
     speechVerb: Arachnid
     speechSounds: Arachnid
@@ -2682,10 +2660,8 @@
       speechVerb: Cluwne
     - type: Bloodstream
       bloodMaxVolume: 150
-      bloodReagents:
-        reagents:
-        - ReagentId: Laughter
-          Quantity: 1
+      bloodReagent: Laughter
+
 - type: entity
   name: павук-чаклун
   parent: MobGiantSpider
@@ -3014,10 +2990,7 @@
     attributes:
       gender: epicene
   - type: Bloodstream
-    bloodReagents:
-      reagents:
-      - ReagentId: DemonsBlood
-        Quantity: 1
+    bloodReagent: DemonsBlood
   - type: Damageable
     damageContainer: BiologicalMetaphysical
     damageModifierSet: Infernal
@@ -3657,10 +3630,7 @@
     speciesId: cat
     templateId: pet
   - type: Bloodstream
-    bloodReagents:
-      reagents:
-      - ReagentId: Sap
-        Quantity: 1
+    bloodReagent: Sap
     bloodMaxVolume: 60
   - type: DamageStateVisuals
     states:

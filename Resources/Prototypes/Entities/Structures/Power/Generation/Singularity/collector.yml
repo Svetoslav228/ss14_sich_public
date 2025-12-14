@@ -2,7 +2,7 @@
   id: RadiationCollector
   name: колектор радіації
   suffix: Empty tank
-  description: Машина, яка збирає випромінювання і перетворює його на енергію. Для роботи потрібний плазмовий газ або тритій, як краща альтернатива.
+  description: Машина, яка збирає випромінювання і перетворює його на енергію. Для роботи потрібний плазмовий газ.
   placement:
     mode: SnapgridCenter
   components:
@@ -62,9 +62,6 @@
       - reactantPrototype: Plasma
         powerGenerationEfficiency: 1
         reactantBreakdownRate: 0.0001
-      - reactantPrototype: Tritium # Sich
-        powerGenerationEfficiency: 1.5
-        reactantBreakdownRate: 0.00005
   - type: RadiationReceiver
   - type: PowerSupplier
   - type: Anchorable

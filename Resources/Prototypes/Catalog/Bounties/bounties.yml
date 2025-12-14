@@ -530,7 +530,7 @@
     amount: 6
     whitelist:
       components:
-      - BatteryAmmoProvider
+      - HitscanBatteryAmmoProvider
     blacklist:
       components:
       - PowerCell
