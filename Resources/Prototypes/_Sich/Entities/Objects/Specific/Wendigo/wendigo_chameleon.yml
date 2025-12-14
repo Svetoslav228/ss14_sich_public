@@ -1,0 +1,6 @@
+- type: entity
+  parent: ChameleonProjector
+  id: SichWendigoChameleonProjector
+  name: містичне маскування
+  description: За допомогою цього ти можеш замаскуватися під деякі об'єкти.
+  suffix: wendigo

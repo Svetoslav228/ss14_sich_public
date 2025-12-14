@@ -14,7 +14,7 @@
     hands:
     - item: SichWendigoSprayPainter
     - item: SichCrayonWendigo
-    - item: ChameleonProjector
+    - item: SichWendigoChameleonProjector
     - item: SichWendigoCloaking
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: artistry-module }
