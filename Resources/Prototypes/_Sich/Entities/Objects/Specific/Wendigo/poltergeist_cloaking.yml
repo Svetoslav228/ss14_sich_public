@@ -1,9 +1,9 @@
 - type: entity
   parent: BaseItem
-  id: SichWendigoCloaking
+  id: SichPoltergeistCloaking
   name: перехід у невидимість
   description: Ти можеш стати невидимим.
-  suffix: Wendigo
+  suffix: полтергейст
   components:
   - type: Sprite
     sprite: Objects/Specific/Research/anomalyscanner.rsi

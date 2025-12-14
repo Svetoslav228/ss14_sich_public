@@ -8,23 +8,23 @@
   "copyright": "drawn by svetoslav228",
   "states": [
     {
-      "name": "wendigo",
+      "name": "poltergeist",
       "directions": 4
 	},
 	{
-	  "name": "wendigo_e",
+	  "name": "poltergeist_e",
       "directions": 4
 	},
 	{
-	  "name": "wendigo_e_r",
+	  "name": "poltergeist_e_r",
       "directions": 4
 	},
 	{
-	  "name": "wendigo_l",
+	  "name": "poltergeist_l",
       "directions": 4
 	},
     {
-      "name": "wendigo-moving",
+      "name": "poltergeist-moving",
       "directions": 4,
       "delays": [
         [
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "name": "wendigo_dead",
+      "name": "poltergeist_dead",
       "delays": [
         [
           1

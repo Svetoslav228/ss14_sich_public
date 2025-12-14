@@ -1,5 +1,5 @@
 - type: Tag
-  id: SichWendigoAbilities #для здібностей вендіго
+  id: SichPoltergeistAbilities #для здібностей полтергейста
   
 - type: Tag
-  id: SichWendigoAbilitiesCombat #для здібностей вендіго
+  id: SichPoltergeistAbilitiesCombat #для здібностей полтергейста

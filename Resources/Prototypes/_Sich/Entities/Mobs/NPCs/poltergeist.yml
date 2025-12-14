@@ -1,49 +1,49 @@
 
 - type: entity
   parent: MobElementalBase
-  id: SichMobWendigo
+  id: SichMobPoltergeist
   name: В•≠§£Ѓ
   description: ±≤∞†Є≠Ѓ Ґ®∞≥°†©.
-  suffix: ?????
+  suffix: полтергейст
   components:
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base", "movement"]
-      state: wendigo
-      sprite: _Sich/Mobs/NPCs/wendigo.rsi
-    - state: wendigo_e
-      sprite: _Sich/Mobs/NPCs/wendigo.rsi
+      state: poltergeist
+      sprite: _Sich/Mobs/NPCs/poltergeist.rsi
+    - state: poltergeist_e
+      sprite: _Sich/Mobs/NPCs/poltergeist.rsi
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
       visible: false
-    - state: wendigo_l
-      sprite: _Sich/Mobs/NPCs/wendigo.rsi
+    - state: poltergeist_l
+      sprite: _Sich/Mobs/NPCs/poltergeist.rsi
       shader: unshaded
       map: ["light"]
       visible: false
   - type: SpriteMovement
     movementLayers:
       movement:
-        state: wendigo-moving
+        state: poltergeist-moving
     noMovementLayers:
       movement:
-        state: wendigo
+        state: poltergeist
   - type: DamageStateVisuals
     states:
       Alive:
-        Base: wendigo
+        Base: poltergeist
       Critical:
-        Base: wendigo_dead
+        Base: poltergeist_dead
       Dead:
-        Base: wendigo_dead
+        Base: poltergeist_dead
   - type: Damageable
     damageContainer: ManifestedSpirit
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
   - type: SpecialRespawn
-    prototype: SichMobWendigo
+    prototype: SichMobPoltergeist
   - type: MovementSpeedModifier
     baseWalkSpeed : 4
     baseSprintSpeed : 5
@@ -104,8 +104,8 @@
         acts: [ "Destruction" ]
   - type: GhostRole
     makeSentient: true
-    name: ghost-role-information-wendigo-name
-    description: ghost-role-information-wendigo-description
+    name: ghost-role-information-poltergeist-name
+    description: ghost-role-information-poltergeist-description
     rules: ghost-role-information-antagonist-rules
     mindRoles:
     - MindRoleGhostRoleSoloAntagonist
@@ -124,17 +124,17 @@
     canBeStripped: false
   - type: ComplexInteraction
   - type: BorgChassis
-    hasMindState: wendigo_e
-    noMindState: wendigo_e_r
+    hasMindState: poltergeist_e
+    noMindState: poltergeist_e_r
     maxModules: 3
     moduleWhitelist:
       tags:
-        - SichWendigoAbilitiesCombat
-        - SichWendigoAbilities
+        - SichPoltergeistAbilitiesCombat
+        - SichPoltergeistAbilities
   - type: ContainerFill
     containers:
       borg_brain:
       - MMIFilled
       borg_module:
-      - SichWendigoAbilitiesCombat
-      - SichWendigoAbilities
+      - SichPoltergeistAbilitiesCombat
+      - SichPoltergeistAbilities

@@ -1,9 +1,9 @@
 - type: entity
   parent: SprayPainterBorg
-  id: SichWendigoSprayPainter
+  id: SichPoltergeistSprayPainter
   name: містичний фарбувальник
   description: Ти можеш за допомогою цього фарбувати речі.
-  suffix: Wendigo
+  suffix: полтергейст
   components:
   - type: AutoRecharge
     rechargeDuration: 3

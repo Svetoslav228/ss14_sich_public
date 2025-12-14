@@ -1,2 +1,2 @@
-ghost-role-information-wendigo-name = Вендіго
-ghost-role-information-wendigo-description = ти злий дух, який є втіленням усіх вмерлих на станції. ти хочеш наводити жах на членів екіпажу, та їхньої смерті.
+ghost-role-information-poltergeist-name = Полтергейст
+ghost-role-information-poltergeist-description = ти злий дух, який є втіленням усіх вмерлих на станції. ти хочеш наводити жах на членів екіпажу, та їхньої смерті.

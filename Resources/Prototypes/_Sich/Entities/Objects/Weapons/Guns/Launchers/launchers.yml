@@ -1,13 +1,13 @@
 - type: entity
   parent: WeaponTetherGun
-  id: SichWendigoWeaponTetherGun
+  id: SichPoltergeistWeaponTetherGun
   name: містичний контроль
   description: ти можеш за допомогою цього переміщювати об'єкти
-  suffix: Wendigo
+  suffix: полтергейст
 
 - type: entity
   parent: WeaponForceGun
-  id: SichWendigoWeaponForceGun
+  id: SichPoltergeistWeaponForceGun
   name: містичний сила
   description: ти можеш за допомогою цього кидати об'єкти
-  suffix: Wendigo
+  suffix: полтергейст

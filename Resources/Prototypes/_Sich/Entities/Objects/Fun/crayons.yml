@@ -1,9 +1,9 @@
 - type: entity
   parent: CrayonInedible
-  id: SichCrayonWendigo
+  id: SichCrayonPoltergeist
   name: містична кредка
   description: містична кредка щоби зіставляти знаки.
-  suffix: Wendigo
+  suffix: полтергейст
   components:
   - type: Sprite
     state: electric

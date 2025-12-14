@@ -1,6 +1,6 @@
 - type: entity
   parent: JetpackXenoborg
-  id: SichWendigoJetpack
+  id: SichPoltergeistJetpack
   name: містичний політ
   description: Це дозволяє тобі літати у космосі.
-  suffix: wendigo
+  suffix: полтергейст

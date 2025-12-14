@@ -1,10 +1,10 @@
 #частина віндіго
 - type: entity
-  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule,]
-  id: SichWendigoAbilities
+  parent: [ BaseBorgModule, BaseProviderBorgModule,]
+  id: SichPoltergeistAbilities
   name: здібності для запугування
   description: твої здібності для того щоб налякати членів екіпажу.
-  suffix: Wendigo
+  suffix: полтергейст
   components:
   - type: Sprite
     layers:
@@ -12,19 +12,19 @@
     - state: icon-xenoborg-projector
   - type: ItemBorgModule
     hands:
-    - item: SichWendigoSprayPainter
-    - item: SichCrayonWendigo
-    - item: SichWendigoChameleonProjector
-    - item: SichWendigoCloaking
+    - item: SichPoltergeistSprayPainter
+    - item: SichCrayonPoltergeist
+    - item: SichPoltergeistChameleonProjector
+    - item: SichPoltergeistCloaking
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: artistry-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule,]
-  id: SichWendigoAbilitiesCombat
+  parent: [ BaseBorgModule, BaseProviderBorgModule,]
+  id: SichPoltergeistAbilitiesCombat
   name: здібності для нападу
   description: твої здібності для того щоб напасти на членів екіпажу.
-  suffix: Wendigo
+  suffix: полтергейст
   components:
   - type: Sprite
     layers:
@@ -32,10 +32,10 @@
     - state: icon-xenoborg-projector
   - type: ItemBorgModule
     hands:
-    - item: SichWendigoArmBlade
-    - item: SichWendigoWeaponForceGun
-    - item: SichWendigoWeaponTetherGun
-    - item: SichWendigoCloaking
-    - item: SichWendigoJetpack
+    - item: SichPoltergeistArmBlade
+    - item: SichPoltergeistWeaponForceGun
+    - item: SichPoltergeistWeaponTetherGun
+    - item: SichPoltergeistCloaking
+    - item: SichPoltergeistJetpack
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/changeling.rsi, state: armblade }

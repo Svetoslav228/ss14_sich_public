@@ -1,6 +1,6 @@
 - type: entity
   parent: ChameleonProjector
-  id: SichWendigoChameleonProjector
+  id: SichPoltergeistChameleonProjector
   name: містичне маскування
   description: За допомогою цього ти можеш замаскуватися під деякі об'єкти.
-  suffix: wendigo
+  suffix: полтергейст
