@@ -29,10 +29,7 @@
     state: full
   # Damage and speed
   - type: Bloodstream
-    bloodReagents:
-      reagents:
-      - ReagentId: Oil
-        Quantity: 1
+    bloodReagent: Oil
     bloodlossDamage:
       types:
         Heat: 0.25

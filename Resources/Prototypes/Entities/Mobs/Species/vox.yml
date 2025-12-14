@@ -89,10 +89,7 @@
       Burn:
         sprite: Mobs/Effects/burn_damage.rsi
   - type: Bloodstream
-    bloodReagents:
-      reagents:
-      - ReagentId: AmmoniaBlood
-        Quantity: 1
+    bloodReagent: AmmoniaBlood
   - type: MeleeWeapon
     soundHit:
       collection: AlienClaw
