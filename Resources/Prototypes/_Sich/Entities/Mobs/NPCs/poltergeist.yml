@@ -1,6 +1,6 @@
 
 - type: entity
-  parent: MobElementalBase
+  parent: [MobElementalBase, MobPolymorphable]
   id: SichMobPoltergeist
   name: В•≠§£Ѓ
   description: ±≤∞†Є≠Ѓ Ґ®∞≥°†©.
@@ -61,6 +61,7 @@
   - type: ActionGrant
     actions:
     - ActionBlink
+    - ActionPolymorphJaunt
   - type: IgnoreSpiderWeb
   - type: Examiner
   - type: DoAfter
@@ -111,7 +112,7 @@
     mindRoles:
     - MindRoleGhostRoleSoloAntagonist
     raffle:
-      settings: short
+      settings: default
   - type: GhostTakeoverAvailable
   - type: ContainerContainer
     containers:
