@@ -132,7 +132,7 @@
       tags:
         - SichPoltergeistAbilitiesCombat
         - SichPoltergeistAbilities
-        - BorgModuleTool
+        - SichPoltergeistAbilitiesTool
   - type: ContainerFill
     containers:
       borg_brain:
@@ -140,4 +140,4 @@
       borg_module:
       - SichPoltergeistAbilitiesCombat
       - SichPoltergeistAbilities
-      - BorgModuleTool
+      - SichPoltergeistAbilitiesTool

@@ -39,3 +39,24 @@
     - item: SichPoltergeistJetpack
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/changeling.rsi, state: armblade }
+
+- type: entity
+  id: SichPoltergeistAbilitiesTool
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: здібності інструментів
+  description: твої здібності інструментів.
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+    - state: icon-tools
+  - type: ItemBorgModule
+    hands:
+    - item: Crowbar
+    - item: Wrench
+    - item: Screwdriver
+    - item: Wirecutter
+    - item: WelderIndustrial
+    - item: Multitool
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: tool-module }
