@@ -18,7 +18,7 @@
     attackRate: 1
     damage:
       types:
-        Asphyxiation: 6.5
+        Asphyxiation: 9 #трохи краще за лом
   - type: Item
     size: Normal
     sprite: Objects/Weapons/Melee/armblade.rsi
