@@ -53,8 +53,7 @@
   - type: ItemBorgModule
     hands:
     - item: Crowbar
-    - item: Wrench
-    - item: Screwdriver
+    - item: Screwdriver #no wrench
     - item: Wirecutter
     - item: WelderIndustrial
     - item: Multitool
