@@ -45,6 +45,7 @@
   parent: [ BaseBorgModule, BaseProviderBorgModule ]
   name: здібності інструментів
   description: твої здібності інструментів.
+  suffix: полтергейст
   components:
   - type: Sprite
     layers:
@@ -52,10 +53,10 @@
     - state: icon-tools
   - type: ItemBorgModule
     hands:
-    - item: Crowbar
-    - item: Screwdriver #no wrench
-    - item: Wirecutter
-    - item: WelderIndustrial
-    - item: Multitool
+    - item: PoltergeistCrowbar
+    - item: PoltergeistWirecutter #no wrench
+    - item: PoltergeistScrewdriver
+    - item: PoltergeistWelderIndustrial
+    - item: PoltergeistMultitool
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: tool-module }
