@@ -38,7 +38,16 @@
       Dead:
         Base: poltergeist_dead
   - type: Damageable
-    damageContainer: PureSpirit
+    damageContainer: ManifestedSpirit
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    damageCap: 200
+    damage:
+      types:
+        Burn: -0.1
+      groups:
+        Brute: -0.1
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
