@@ -38,12 +38,10 @@
       Dead:
         Base: poltergeist_dead
   - type: Damageable
-    damageContainer: ManifestedSpirit
+    damageContainer: PureSpirit
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
-  - type: SpecialRespawn
-    prototype: SichMobPoltergeist
   - type: MovementSpeedModifier
     baseWalkSpeed : 4
     baseSprintSpeed : 5
@@ -87,12 +85,12 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      50: Dead
+      200: Dead
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 50
+        damage: 200
       behaviors:
       - !type:PlaySoundBehavior
         sound:
