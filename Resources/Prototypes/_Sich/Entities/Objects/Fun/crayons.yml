@@ -6,9 +6,9 @@
   suffix: полтергейст
   components:
   - type: Sprite
-    state: electric
+    sprite: _Sich/Objects/Fun/poltergeist_crayon.rsi
+    state: icon
   - type: Item
-    heldPrefix: electric
   - type: Crayon
     deleteEmpty: false
     color: Red
