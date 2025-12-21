@@ -1,6 +1,6 @@
 
 - type: entity
-  parent: [MobElementalBase, MobPolymorphable]
+  parent: [MobElementalBase, MobPolymorphable, FlyingMobBase]
   id: SichMobPoltergeist
   name: В•≠§£Ѓ
   description: ±≤∞†Є≠Ѓ Ґ®∞≥°†©.
@@ -46,7 +46,6 @@
     damage:
       groups:
         Burn: -0.1
-      groups:
         Brute: -0.1
   - type: HTN
     rootTask:
