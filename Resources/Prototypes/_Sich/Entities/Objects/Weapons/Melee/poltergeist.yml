@@ -9,7 +9,7 @@
   - type: Execution
     doAfterDuration: 4.0
   - type: Sprite
-    sprite: Objects/Weapons/Melee/armblade.rsi
+    sprite: _Sich/Objects/Weapons/Melee/poltergeist_armblade.rsi
     state: icon
   - type: MeleeWeapon
     soundHit:
