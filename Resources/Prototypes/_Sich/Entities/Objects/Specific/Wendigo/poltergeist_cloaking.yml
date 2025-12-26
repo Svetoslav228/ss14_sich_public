@@ -6,7 +6,7 @@
   suffix: полтергейст
   components:
   - type: Sprite
-    sprite: Objects/Specific/Research/anomalyscanner.rsi
+    sprite: _Sich/Objects/Specific/poltergeist_cloaking.rsi
     state: icon
   - type: ItemToggle
   - type: ComponentToggler
