@@ -6,5 +6,5 @@
   id: RCDElite
   name: steal-target-groups-RCDElite
   sprite:
-    sprite: _Sich/Objects/tools/ellite_rcd.rsi
+    sprite: _Sich/Objects/Tools/ellite_rcd.rsi
     state: icon
